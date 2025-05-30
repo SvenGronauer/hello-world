@@ -1,0 +1,8 @@
+services:
+
+  frontend:
+    build:
+      context: frontend
+    ports:
+      - 80:3000
+
