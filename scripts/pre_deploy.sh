@@ -1,3 +1,3 @@
 #!/bin/bash
-# docker rm -f `docker ps -q -a`
+cd /home/ec2-user/hello-world
 docker-compose down
