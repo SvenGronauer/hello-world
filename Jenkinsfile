@@ -5,9 +5,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Start building...'
+        echo 'Start building with docker:'
         sh 'docker-compose --version'
-        sh 'ls -l'
         sh 'docker-compose build'
       }
     }
@@ -18,7 +17,8 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'docker-compose --version'
+        echo 'Compose up and starts services in background'
+        sh 'docker-compose up -d'
       }
     }
   }
