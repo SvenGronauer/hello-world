@@ -5,7 +5,10 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'hello world from build stage!'
+        echo 'Start building...'
+        sh 'docker-compose --version'
+        sh 'ls -l'
+        sh 'docker-compose build'
       }
     }
     stage('Test') {
