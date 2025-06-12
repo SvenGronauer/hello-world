@@ -6,6 +6,10 @@ pipeline {
         echo 'hello world'
       }
     }
-
+    stage('Test') {
+      steps {
+        echo 'Skip testing for now'
+      }
+    }
   }
 }
