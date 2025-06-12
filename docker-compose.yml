@@ -1,5 +1,18 @@
 services:
 
+  db:
+    image: postgres:17.5
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+
   frontend:
     build: ./frontend
     # hostname: frontend

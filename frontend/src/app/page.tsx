@@ -1,8 +1,11 @@
+import { getUsers } from "@/db";
 import Image from "next/image";
 import Link from 'next/link'
 
+export default async function Home() {
 
-export default function Home() {
+  const users = await getUsers()
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
@@ -56,6 +59,15 @@ export default function Home() {
             </span>
           </Link>
         </div>
+
+        <h1 className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">
+          Users in Database
+        </h1>
+        <ol>{users.map( (user) => (
+          <li key={user.name}>{user.name}</li>
+        ))}
+
+        </ol>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
