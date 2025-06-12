@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'hello world'
+        sh 'docker-compose build'
       }
     }
     stage('Test') {
