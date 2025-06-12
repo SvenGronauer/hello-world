@@ -1,10 +1,12 @@
 pipeline {
-  agent any
+  /* Requires the Docker Pipeline plugin */
+  agent { docker { image 'node:20-alpine3.21' } }
+
   stages {
     stage('Build') {
       steps {
         echo 'hello world'
-        sh 'docker-compose build'
+        sh 'node --version'
       }
     }
     stage('Test') {
