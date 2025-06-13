@@ -2,11 +2,5 @@ services:
 
   frontend:
     build: ./frontend
-    # hostname: frontend
     ports:
       - 3000:3000
-
-  # nginx:
-  #   build: ./nginx
-  #   ports:
-  #     - 80:80
