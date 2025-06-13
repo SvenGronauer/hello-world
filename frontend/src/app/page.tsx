@@ -29,6 +29,9 @@ export default function Home() {
           <li className="mb-2 tracking-[-.01em]">
             Deploy.
           </li>
+          <li className="mb-2 tracking-[-.01em]">
+            Ship.
+          </li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
