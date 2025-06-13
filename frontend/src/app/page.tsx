@@ -35,6 +35,9 @@ export default function Home() {
           <li className="mb-2 tracking-[-.01em]">
             Repeat.
           </li>          
+          <li className="mb-2 tracking-[-.01em]">
+            This bullet point has been added on dev branch.
+          </li>            
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
