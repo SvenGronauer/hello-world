@@ -3,6 +3,12 @@ pipeline {
   agent any
 
   stages {
+    stage('Source') { 
+      steps {
+        // Get some code from a GitHub repository
+        git branch: 'main', credentialsId: 'LookUp: Dashboard > Manage Jenkins > Credentials', url: 'https://github.com/SvenGronauer/hello-world.git'
+      }
+    }
     stage('Build') {
       steps {
         echo 'Start building with docker:'
